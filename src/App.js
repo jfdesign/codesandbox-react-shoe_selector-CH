@@ -1,11 +1,26 @@
 import React from "react";
+
+import ShoeOptionsContextProvider from "./components/ShoeOptionsContext";
+
+import Shoe from "./components/Shoe";
+import Selectors from "./components/Selectors";
+
 import "./styles.css";
 
-export default function App() {
+function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <ShoeOptionsContextProvider>
+      <div className="snearkerInvetoryC">
+        <h1>Sneaker Inventory Selector</h1>
+
+        <Selectors />
+
+        <br />
+
+        <Shoe />
+      </div>
+    </ShoeOptionsContextProvider>
   );
 }
+
+export default App;
